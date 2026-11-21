@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple four-operation calculator">
+  <title>Four-Operation Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="calculator">
+    <p class="eyebrow">EDBYTES · MILESTONE 5</p>
+    <h1>Four-operation calculator</h1>
+    <p class="intro">Enter two numbers and choose an operation.</p>
+
+    <form id="calculator-form" novalidate>
+      <label for="a">First number</label>
+      <input id="a" name="a" type="number" step="any" inputmode="decimal" placeholder="e.g. 24">
+
+      <label for="b">Second number</label>
+      <input id="b" name="b" type="number" step="any" inputmode="decimal" placeholder="e.g. 6">
+
+      <div class="operations" id="operations" aria-label="Calculator operations">
+        <button type="button" data-op="+" aria-label="Add">＋ <span>Add</span></button>
+        <button type="button" data-op="-" aria-label="Subtract">− <span>Subtract</span></button>
+        <button type="button" data-op="*" aria-label="Multiply">× <span>Multiply</span></button>
+        <button type="button" data-op="/" aria-label="Divide">÷ <span>Divide</span></button>
+      </div>
+    </form>
+
+    <section class="result-panel" aria-live="polite">
+      <p class="result-label">RESULT</p>
+      <p id="result" class="result">Your answer will appear here</p>
+    </section>
+    <p class="footnote">Tip: You can use whole numbers or decimals.</p>
+  </main>
+</body>
+</html>

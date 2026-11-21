@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+  color: #17233b; background: linear-gradient(135deg, #eef4ff, #f7f9ff 55%, #e9f8fb);
+}
+.calculator {
+  width: min(100%, 520px); padding: clamp(24px, 5vw, 42px); border: 1px solid #e1e8f5;
+  border-radius: 24px; background: #fff; box-shadow: 0 22px 65px rgba(28, 54, 100, .12);
+}
+.eyebrow { margin: 0 0 10px; color: #3863d9; font-size: .76rem; font-weight: 800; letter-spacing: .13em; }
+h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.2rem); line-height: 1.15; }
+.intro { margin: 12px 0 28px; color: #66738b; }
+label { display: block; margin: 17px 0 7px; font-size: .92rem; font-weight: 700; }
+input {
+  width: 100%; padding: 14px 15px; border: 1px solid #d7dfed; border-radius: 12px;
+  background: #fbfcff; color: #17233b; font: inherit; outline: none;
+}
+input:focus { border-color: #4269e5; box-shadow: 0 0 0 3px rgba(66, 105, 229, .14); }
+.operations { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 25px; }
+button {
+  min-height: 76px; border: 0; border-radius: 14px; background: #edf2ff; color: #284fc4;
+  font: inherit; font-size: 1.8rem; font-weight: 700; cursor: pointer; transition: transform .15s, background .15s;
+}
+button span { display: block; margin-top: 2px; font-size: .72rem; font-weight: 700; }
+button:hover { background: #dfe8ff; transform: translateY(-2px); }
+button:focus-visible { outline: 3px solid #1b4bd7; outline-offset: 3px; }
+.result-panel { margin-top: 25px; padding: 18px 20px; border-radius: 14px; background: #f4f7ff; }
+.result-label { margin: 0 0 7px; color: #697895; font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+.result { margin: 0; overflow-wrap: anywhere; color: #1e3f9b; font-size: 1.25rem; font-weight: 750; }
+.result.error { color: #b42318; }
+.footnote { margin: 18px 0 0; color: #8994a8; font-size: .8rem; }
+@media (max-width: 380px) { .operations { grid-template-columns: repeat(2, 1fr); } }
